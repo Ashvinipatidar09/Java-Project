@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 interface FacultyActions {
-    void hire(Faculty fac);
+    void recruit(Faculty fac);
 }
 
 class Faculty {
@@ -33,8 +33,7 @@ class Faculty {
 
 class FacultyManagementSystem implements FacultyActions {
 
-    @Override
-    public void hire(Faculty fac) {
+    public void recruit(Faculty fac) {
         fac.displayDetails();
     }
 
@@ -60,7 +59,7 @@ class FacultyManagementSystem implements FacultyActions {
         newFaculty.setDepartment(department);
         newFaculty.setSubject(subject);
 
-        fms.hire(newFaculty);
+        fms.recruit(newFaculty);
 
         scanner.close();
     }
